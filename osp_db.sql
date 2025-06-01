@@ -79,6 +79,7 @@ CREATE TABLE `negotiations` (
   `Pid` int(11) NOT NULL,
   `seller_id` int(11) NOT NULL,
   `buyer_id` int(11) NOT NULL,
+  'header' text NOT NULL,
   `Message` text NOT NULL,
   `price` int(11) NOT NULL DEFAULT -1,
   `sender_id` int(11) NOT NULL,
