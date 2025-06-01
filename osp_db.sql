@@ -80,6 +80,8 @@ CREATE TABLE `negotiations` (
   `seller_id` int(11) NOT NULL,
   `buyer_id` int(11) NOT NULL,
   `Message` text NOT NULL,
+  -- The price is set to -1 initially, it will be updated when the negotiation is finalized
+  -- and the final price is agreed upon.
   `price` int(11) NOT NULL DEFAULT -1,
   `sender_id` int(11) NOT NULL,
   `ismanager` int(11) DEFAULT 0
