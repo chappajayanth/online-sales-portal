@@ -7,7 +7,7 @@
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZER";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZER,NO_ENGINE_SUBSTITUTION";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -79,6 +79,7 @@ CREATE TABLE `negotiations` (
   `Pid` int(11) NOT NULL,
   `seller_id` int(11) NOT NULL,
   `buyer_id` int(11) NOT NULL,
+  'header' text NOT NULL,
   `Message` text NOT NULL,
   -- The price is set to -1 initially, it will be updated when the negotiation is finalized
   -- and the final price is agreed upon.
