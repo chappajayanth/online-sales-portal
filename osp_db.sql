@@ -80,6 +80,8 @@ CREATE TABLE `negotiations` (
   `seller_id` int(11) NOT NULL,
   `buyer_id` int(11) NOT NULL,
   `Message` text NOT NULL,
+  -- The price is set to -1 initially, it will be updated when the negotiation is finalized
+  -- and the final price is agreed upon.
   `price` int(11) NOT NULL DEFAULT -1,
   `sender_id` int(11) NOT NULL,
   `ismanager` int(11) DEFAULT 0
@@ -93,6 +95,8 @@ INSERT INTO `negotiations` (`id`, `Pid`, `seller_id`, `buyer_id`, `Message`, `pr
 (48, 25, 30, 31, 'Hello, How old is the car?', -1, 31, 0),
 (49, 25, 30, 31, '1 year', -1, 30, 0),
 (50, 25, 30, 31, 'Since it\'s old, make it Rs 70,00,000', -1, 31, 0),
+(51, 25, 30, 31, 'No, I can\'t do that', -1, 30, 0),
+(52, 25, 30, 31, 'I can make it Rs 80,00,000', -1, 31, 0),
 (51, 25, 30, 31, 'No the best I can do is Rs 80,00,000', -1, 30, 0),
 (53, 25, 30, 31, 'I recommend Hrushikesh to make it Rs 78,00,000', -1, 7, 1),
 (54, 25, 30, 31, 'Ok, I can do that', -1, 30, 0),
